@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Small Talk Everyday
 
-## Getting Started
+英語スピーキング課題を毎日自動配信するWebサービスです。
 
-First, run the development server:
+生徒が家に帰ってから、自動で課題が配信される。
+その課題に答えることで、毎日英語に触れることができる。
+教師側の追加労働ゼロで、生徒の英語力を伸ばす。
+
+## 使っている技術
+
+| 項目 | 内容 |
+|---|---|
+| フロント | Next.js（TypeScript） |
+| ホスティング | AWS Amplify |
+| DB | RDS（PostgreSQL）※準備中 |
+
+## このリポジトリの構成
+
+```
+small_talk_everyday/
+├── src/           … アプリのソースコード
+├── public/        … 画像などの静的ファイル
+├── docs/          … ドキュメント・仕様メモ・画面構成など
+├── package.json   … 使用ライブラリの一覧
+└── README.md      … このファイル
+```
+
+## 開発環境のセットアップ（自分のPCで動かしたい場合）
+
+### 1. 必要なもの
+
+- [Node.js](https://nodejs.org/)（LTS版を推奨）
+- [Git](https://git-scm.com/)
+
+### 2. リポジトリをクローン
+
+```bash
+git clone https://github.com/rainbowstar2400/small_talk_everyday.git
+cd small_talk_everyday
+```
+
+### 3. ライブラリをインストール
+
+```bash
+npm install
+```
+
+### 4. 開発サーバーを起動
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ブラウザで http://localhost:3000 を開くと、アプリが表示されます。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## デプロイ
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+mainブランチにpushすると、AWS Amplifyが自動でビルド・デプロイしてくれます。
+特別な操作は不要です。
 
-## Learn More
+## ドキュメント
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+`docs/` フォルダに仕様メモや画面構成などの資料をまとめています。
